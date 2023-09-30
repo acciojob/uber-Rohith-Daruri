@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 public class Driver{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

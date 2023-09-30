@@ -3,7 +3,7 @@ package com.driver.model;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
-
+@Entity
 public class TripBooking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

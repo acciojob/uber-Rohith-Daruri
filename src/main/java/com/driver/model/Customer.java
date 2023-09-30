@@ -2,12 +2,10 @@ package com.driver.model;
 
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.CascadeType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+@Entity
 
 public class Customer {
     @Id
