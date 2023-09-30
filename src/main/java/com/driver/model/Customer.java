@@ -13,18 +13,8 @@ public class Customer {
     int customerId;
     private String mobile;
     private String password;
-    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList = new ArrayList<>();
-
-    public Customer() {
-    }
-
-    public Customer(int customerId, String mobile, String password, List<TripBooking> tripBookingList) {
-        this.customerId = customerId;
-        this.mobile = mobile;
-        this.password = password;
-        this.tripBookingList = tripBookingList;
-    }
 
     public int getCustomerId() {
         return customerId;

@@ -1,6 +1,8 @@
 package com.driver.model;
 
 import com.driver.model.Driver;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTest;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
@@ -16,16 +18,6 @@ public class Cab {
     @OneToOne
     @JoinColumn
     private Driver driver;
-
-    public Cab() {
-    }
-
-    public Cab(int ID, int perKmRate, boolean available, Driver driver) {
-        this.ID = ID;
-        this.perKmRate = perKmRate;
-        this.available = available;
-        this.driver = driver;
-    }
 
     public int getID() {
         return ID;
@@ -58,4 +50,5 @@ public class Cab {
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
+
 }

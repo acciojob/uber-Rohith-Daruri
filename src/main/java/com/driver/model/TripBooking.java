@@ -21,20 +21,6 @@ public class TripBooking {
     @JoinColumn
     private Driver driver;
 
-    public TripBooking() {
-    }
-
-    public TripBooking(int tripBookingId, String fromLocation, String toLocation, int distanceInKm, TripStatus tripStatus, int bill, Customer customer, Driver driver) {
-        this.tripBookingId = tripBookingId;
-        this.fromLocation = fromLocation;
-        this.toLocation = toLocation;
-        this.distanceInKm = distanceInKm;
-        this.tripStatus = tripStatus;
-        this.bill = bill;
-        this.customer = customer;
-        this.driver = driver;
-    }
-
     public int getTripBookingId() {
         return tripBookingId;
     }

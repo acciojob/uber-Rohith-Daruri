@@ -6,26 +6,17 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
-public class Driver{
+public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
- int driverId;
-private String mobile;
-private String password;
-@OneToOne(mappedBy = "driver",cascade = CascadeType.ALL)
-private Cab cab;
+    int driverId;
+    private String mobile;
+    private String password;
+    @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
+    private Cab cab;
 
-@OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
-List<TripBooking> tripBookingList = new ArrayList<>();
-
-    public Driver() {
-    }
-
-    public Driver(int driverId, String mobile, String password) {
-        this.driverId = driverId;
-        this.mobile = mobile;
-        this.password = password;
-    }
+    @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL)
+    List<TripBooking> tripBookingList = new ArrayList<>();
 
     public int getDriverId() {
         return driverId;
