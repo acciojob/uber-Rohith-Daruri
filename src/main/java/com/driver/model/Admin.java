@@ -1,18 +1,21 @@
 package com.driver.model;
 
-import org.springframework.data.annotation.Id;
-
 import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Entity
 public class Admin{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int adminId;
+    private int adminId;
     private String username;
     private String password;
+
+    public Admin() {
+    }
 
     public int getAdminId() {
         return adminId;

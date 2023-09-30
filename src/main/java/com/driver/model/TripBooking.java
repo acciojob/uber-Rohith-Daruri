@@ -1,7 +1,5 @@
 package com.driver.model;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 @Entity
 public class TripBooking {
@@ -13,13 +11,16 @@ public class TripBooking {
     private int distanceInKm;
     @Enumerated(EnumType.STRING)
     private TripStatus tripStatus;
-    int bill;
+    private int bill;
     @ManyToOne
     @JoinColumn
     private Customer customer;
     @ManyToOne
     @JoinColumn
     private Driver driver;
+
+    public TripBooking() {
+    }
 
     public int getTripBookingId() {
         return tripBookingId;
