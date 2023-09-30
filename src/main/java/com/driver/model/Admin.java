@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 public class Admin{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int adminId;
+    int adminId;
     private String username;
     private String password;
 

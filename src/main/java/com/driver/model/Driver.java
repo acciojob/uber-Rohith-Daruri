@@ -9,7 +9,7 @@ import java.util.List;
 public class Driver{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int driverId;
+ int driverId;
 private String mobile;
 private String password;
 @OneToOne(mappedBy = "driver",cascade = CascadeType.ALL)

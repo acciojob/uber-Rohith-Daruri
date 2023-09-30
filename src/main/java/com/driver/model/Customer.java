@@ -10,7 +10,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int customerId;
+    int customerId;
     private String mobile;
     private String password;
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
