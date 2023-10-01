@@ -2,13 +2,12 @@ package com.driver.model;
 
 import javax.persistence.*;
 
-@Entity
 public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    int perKmRate;
-    boolean available;
+    private int perKmRate;
+    private boolean available;
     @OneToOne
     @JoinColumn
     Driver driver;
@@ -35,7 +34,9 @@ public class Cab {
     public boolean isAvailable() {
         return available;
     }
-
+    public boolean getAvailable(){
+        return available;
+    }
     public void setAvailable(boolean available) {
         this.available = available;
     }
