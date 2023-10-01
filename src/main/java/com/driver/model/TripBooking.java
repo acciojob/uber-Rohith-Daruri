@@ -10,7 +10,7 @@ public class TripBooking {
     private String fromLocation;
     private String toLocation;
     private int distanceInKm;
-    private TripStatus tripStatus;
+    private TripStatus Status;
     private int bill;
     @ManyToOne
     @JoinColumn
@@ -55,11 +55,11 @@ public class TripBooking {
     }
 
     public TripStatus getTripStatus() {
-        return tripStatus;
+        return Status;
     }
 
-    public void setTripStatus(TripStatus tripStatus) {
-        this.tripStatus = tripStatus;
+    public void setTripStatus(TripStatus Status) {
+        this.Status = Status;
     }
 
     public int getBill() {
