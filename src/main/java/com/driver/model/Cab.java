@@ -1,33 +1,27 @@
 package com.driver.model;
 
-import com.driver.model.Driver;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTest;
-
-
 import javax.persistence.*;
 
 @Entity
-
 public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
-    private int perKmRate;
-    private boolean available;
+    private int id;
+    int perKmRate;
+    boolean available;
     @OneToOne
     @JoinColumn
-    private Driver driver;
+    Driver driver;
 
     public Cab() {
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPerKmRate() {
@@ -53,5 +47,4 @@ public class Cab {
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
-
 }

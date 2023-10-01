@@ -33,6 +33,7 @@ public class AdminController {
 
 	@DeleteMapping("/delete")
 	public void deleteAdmin(@RequestParam Integer adminId){
+
 		adminService.deleteAdmin(adminId);
 	}
 
